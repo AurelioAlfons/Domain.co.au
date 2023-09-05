@@ -25,11 +25,6 @@
             max-height: 200px;
         }
 
-        #changeheight {
-            height: 300px;
-            max-height: 300px;
-        }
-
         body {
             background-image: url(image/aeth.jpg);
             background-repeat: repeat;
@@ -177,6 +172,61 @@
             color: rgb(73, 225, 242);
             font-size: 42px;
         }
+
+        .btn-outline-custom {
+            border: 2px solid #fff;
+            color: #fff;
+            letter-spacing: 1px;
+            transition: all 0.5s;
+            border-radius: 5px;
+            text-transform: capitalize;
+        }
+
+        .btn-rounded {
+            border-radius: 30px !important;
+        }
+
+        .btn {
+            padding: 10px 26px;
+        }
+
+        .mt-4,
+        .my-4 {
+            margin-top: 1.5rem !important;
+        }
+
+        .btn.btn-outline-custom.btn-rounded:hover {
+            box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff;
+            box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff;
+            background-color: #ffffff;
+            /* Change background color to white when hovered */
+            color: #000000;
+        }
+
+        .carousel-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel-inner {
+            text-align: center;
+        }
+
+        .carousel-centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* To set fixed height for carousel images */
+        #changeheight {
+            object-fit: cover;
+            /* This makes sure the image covers the div without stretching */
+            width: auto;
+            height: 300px;
+            max-height: 300px;
+        }
     </style>
     <!-------------------------------- Style --------------------------------------->
 
@@ -187,7 +237,8 @@
                 src="image/logo.png" width="90" height="90" alt="logo">
         </button>
 
-        <hr><hr>
+        <hr>
+        <hr>
         <a class="navbar-brand" href="#home" id="header">Aurelio Hevi Alfons &#9889</a>
 
         <!-- Collapsable for mobile view -->
@@ -220,49 +271,72 @@
 
     <!-- Home page -->
 
-    <div class="bg-overlay">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-12">
-                    <div class="text-white text-center">
-                        <br><br>
-                        <h1 class="header_title mb-0">
-                            <span class="typed-cursor">
-                                <font style="vertical-align: inherit;">Aurelio Hevi Alfons's Personal Page</font>
-                            </span>
-                        </h1>
+    <section class="home-bg-img -100vh creative" id="home">
+        <div class="bg-overlay"></div>
+        <div class="home-table">
+            <div class="home-table-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <div class="text-white text-center">
+                                <br><br>
+                                <h1 class="header_title mb-0">
+                                    <span class="typed-cursor">
+                                        <font style="vertical-align: inherit;">Aurelio Hevi Alfons's Personal Page
+                                        </font>
+                                    </span>
+                                </h1>
 
-                        <ul class="mb-0 list-inline text-center skill_home mt-5">
-                            <li class="list-inline-item mr-0">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Australia</font>
-                                </font>
-                            </li>
-                            <li class="list-inline-item mr-0">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">+61 478 277 275</font>
-                                </font>
-                            </li>
-                            <li class="list-inline-item mr-0">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">yuroalfons0407@gmail.com</font>
-                                </font>
-                            </li>
-                        </ul>
+                                <ul class="mb-0 list-inline text-center skill_home mt-5">
+                                    <li class="list-inline-item mr-0">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Australia</font>
+                                        </font>
+                                    </li>
+                                    <li class="list-inline-item mr-0">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">+61 478 277 275</font>
+                                        </font>
+                                    </li>
+                                    <li class="list-inline-item mr-0">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">yuroalfons0407@gmail.com</font>
+                                        </font>
+                                    </li>
+                                </ul>
 
-                        <ul class="social_home list-unstyled text-center pt-5">
-                            <li class="list-inline-item"><a href="https://www.facebook.com/aurelio.hevialfons" target="_blank"><i class="mdi mdi-facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/aurelio-alfons/" target="_blank"><i class="mdi mdi-linkedin"></i></a></li>
-                            <li class="list-inline-item"><a href="https://www.instagram.com/aurelio_alfons/" target="_blank"><i class="mdi mdi-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="#" target="_blank"><i class="mdi mdi-google-plus"></i></a></li>
-                            <li class="list-inline-item"><a href="https://github.com/AurelioAlfons" target="_blank"><i class="mdi mdi-github"></i></a></li>
-                        </ul>
+                                <ul class="social_home list-unstyled text-center pt-5">
+                                    <li class="list-inline-item"><a href="https://www.facebook.com/aurelio.hevialfons"
+                                            target="_blank"><i class="mdi mdi-facebook"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/aurelio-alfons/"
+                                            target="_blank"><i class="mdi mdi-linkedin"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://www.instagram.com/aurelio_alfons/"
+                                            target="_blank"><i class="mdi mdi-instagram"></i></a></li>
+                                    <li class="list-inline-item"><a href="#" target="_blank"><i
+                                                class="mdi mdi-google-plus"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://github.com/AurelioAlfons"
+                                            target="_blank"><i class="mdi mdi-github"></i></a></li>
+                                </ul>
 
+                                <div class="header_btn">
+                                    <a href="#about" class="btn btn-outline-custom btn-rounded mt-4">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Welcome</font>
+                                        </font>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- About Page -->
+    <br><br>
+    
 
     <!-- Footer Navbar -->
     <a id="foot"></a>
