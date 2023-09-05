@@ -14,9 +14,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
-</head>
 
-<body>
     <!-------------------------------- Style --------------------------------------->
     <style>
         img {
@@ -25,14 +23,10 @@
             max-height: 200px;
         }
 
-        #changeheight {
-            height: 300px;
-            max-height: 300px;
-        }
-
         body {
             background-image: url(image/aeth.jpg);
             background-repeat: repeat;
+            position: relative;
         }
 
         h1,
@@ -134,6 +128,8 @@
             background-image: url(image/navbg.jpg);
             overflow: hidden;
             background-size: cover;
+            display: none;
+            z-index: 1000;
         }
 
         .data-content,
@@ -154,7 +150,7 @@
 
         /*Facebook logo*/
         .social_home .mdi-facebook {
-            color: rgb(204, 208, 238);
+            color: rgb(120, 133, 229);
             font-size: 42px;
         }
 
@@ -168,7 +164,7 @@
             font-size: 42px;
         }
 
-        .social_home .mdi-google-plus {
+        .social_home .mdi-pinterest {
             color: rgb(255, 110, 85);
             font-size: 42px;
         }
@@ -177,17 +173,64 @@
             color: rgb(73, 225, 242);
             font-size: 42px;
         }
+
+        .btn-outline-custom {
+            border: 2px solid #fff;
+            color: #fff;
+            letter-spacing: 1px;
+            transition: all 0.5s;
+            border-radius: 5px;
+            text-transform: capitalize;
+        }
+
+        .btn-rounded {
+            border-radius: 30px !important;
+        }
+
+        .btn {
+            padding: 10px 26px;
+        }
+
+        .mt-4,
+        .my-4 {
+            margin-top: 1.5rem !important;
+        }
+
+        .btn.btn-outline-custom.btn-rounded:hover {
+            box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff;
+            box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff;
+            background-color: #ffffff;
+            /* Change background color to white when hovered */
+            color: #000000;
+        }
+
+        /* To set fixed height for carousel images */
+        #changeheight {
+            object-fit: cover;
+            /* This makes sure the image covers the div without stretching */
+            width: auto;
+            height: 300px;
+            max-height: 300px;
+        }
+
+        #aboutImage {
+            width: 420px;
+            height: 5000px;
+        }
     </style>
     <!-------------------------------- Style --------------------------------------->
+</head>
+
+<body>
+
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light no-bg-overlay fixed-top right">
 
         <button type="button" class="btn btn-basic" data-toggle="popover" title="Logo Made"><img id="logo"
                 src="image/logo.png" width="90" height="90" alt="logo">
         </button>
 
-        <hr>
         <hr>
         <hr>
         <a class="navbar-brand" href="#home" id="header">Aurelio Hevi Alfons &#9889</a>
@@ -221,63 +264,279 @@
     </nav>
 
     <!-- Home page -->
+    <section class="home-bg-img -100vh creative" id="home">
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="bg-overlay"></div>
+        <div class="home-table">
+            <div class="home-table-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12">
+                            <div class="text-white text-center">
+                                <br><br>
+                                <h1 class="header_title mb-0">
+                                    <span class="typed-cursor">
+                                        <font style="vertical-align: inherit;">Aurelio Hevi Alfons's Personal Page
+                                        </font>
+                                    </span>
+                                </h1>
 
-    <div class="bg-overlay">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-12">
-                    <div class="text-white text-center">
-                        <br><br>
-                        <h1 class="header_title mb-0">
-                            <span class="typed-cursor">
-                                <font style="vertical-align: inherit;">Aurelio Hevi Alfons's Personal Page</font>
-                            </span>
-                        </h1>
+                                <ul class="mb-0 list-inline text-center skill_home mt-5">
+                                    <li class="list-inline-item mr-0">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Australia</font>
+                                        </font>
+                                    </li>
+                                    <li class="list-inline-item mr-0">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">+61 478 277 275</font>
+                                        </font>
+                                    </li>
+                                    <li class="list-inline-item mr-0">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">yuroalfons0407@gmail.com</font>
+                                        </font>
+                                    </li>
+                                </ul>
 
-                        <ul class="mb-0 list-inline text-center skill_home mt-5">
-                            <li class="list-inline-item mr-0">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Australia</font>
-                                </font>
-                            </li>
-                            <li class="list-inline-item mr-0">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">+61 478 277 275</font>
-                                </font>
-                            </li>
-                            <li class="list-inline-item mr-0">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">yuroalfons0407@gmail.com</font>
-                                </font>
-                            </li>
-                        </ul>
+                                <ul class="social_home list-unstyled text-center pt-5">
+                                    <li class="list-inline-item"><a href="https://www.facebook.com/aurelio.hevialfons"
+                                            target="_blank"><i class="mdi mdi-facebook"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/aurelio-alfons/"
+                                            target="_blank"><i class="mdi mdi-linkedin"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://www.instagram.com/aurelio_alfons/"
+                                            target="_blank"><i class="mdi mdi-instagram"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://id.pinterest.com/ahevialfons/"
+                                            target="_blank"><i class="mdi mdi-pinterest"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://github.com/AurelioAlfons"
+                                            target="_blank"><i class="mdi mdi-github"></i></a></li>
+                                </ul>
 
-                        <ul class="social_home list-unstyled text-center pt-5">
-                            <li class="list-inline-item"><a href="https://www.facebook.com/aurelio.hevialfons" target="_blank"><i class="mdi mdi-facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="https://www.linkedin.com/in/aurelio-alfons/" target="_blank"><i class="mdi mdi-linkedin"></i></a></li>
-                            <li class="list-inline-item"><a href="https://www.instagram.com/aurelio_alfons/" target="_blank"><i class="mdi mdi-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="#" target="_blank"><i class="mdi mdi-google-plus"></i></a></li>
-                            <li class="list-inline-item"><a href="https://github.com/AurelioAlfons" target="_blank"><i class="mdi mdi-github"></i></a></li>
-                        </ul>
+                                <div class="header_btn">
+                                    <a href="#about" class="btn btn-outline-custom btn-rounded mt-4">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Welcome</font>
+                                        </font>
+                                    </a>
+                                </div>
 
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- About Page -->
+    <section class="section" id="about">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section_title text-center">
+
+                        <h3><span class="font-weight-bold">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">About</font>
+                                </font>
+                            </span>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;"> Me</font>
+                            </font>
+                        </h3>
+
+                        <p class="sec_subtitle mx-auto pt-2">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    Personal webpage, Projects, Lectures, Contact informations, Tools.</font>
+                            </font>
+                        </p>
+
+                        <p class="sec_subtitle mx-auto pt-2">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    <p>Lorem ipsum dolor sit amet. Eum dolorem perspiciatis est aspernatur voluptas aut
+                                        natus pariatur qui corrupti tempora aut laboriosam voluptatem quo quis quae in
+                                        officiis dicta. Qui veritatis earum et excepturi dignissimos 33 quas galisum est
+                                        placeat soluta. Qui quidem nobis est doloribus cumque id dolores recusandae hic
+                                        illo veritatis ut accusantium inventore ut corporis blanditiis ut sequi
+                                        inventore. </p>
+                                    <p>Sed aliquid adipisci et ipsam neque ut quis dolor. Ad quisquam odio est eius
+                                        tempora et molestiae recusandae est corrupti repudiandae. Et rerum voluptate qui
+                                        minus galisum sed maiores internos. Et quae repellendus est temporibus sint qui
+                                        molestias illum. </p>
+                                    <p>33 rerum galisum est praesentium sunt ea odit rerum ut excepturi dolor et
+                                        recusandae odio. Ut veritatis porro et officiis saepe non omnis tempore id
+                                        exercitationem impedit sit quam consequatur et quia voluptates hic sequi
+                                        voluptatum. At dolor commodi et expedita consequatur eos voluptatum tempora qui
+                                        assumenda voluptate in maxime nihil. </p>
+                                </font>
+                            </font>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section><br><br><br>
+
+    <!-- Resume page -->
+    <section class="section" id="resume"></section>
+    <br><br><br><br><br><br><br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section_title text-center">
+                    <h3>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Education & Experience</font>
+                        </font>
+                    </h3>
+                    <div class="vr_line mx-auto d-block"></div>
+                    <p class="sec_subtitle mx-auto text-white pt-2">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Knowledge & acumulation from universityKnowledge and
+                                accumulation from university are not just diplomas hung on a wall, but the keys that
+                                unlock the doors to endless possibilities.</font>
+                        </font>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 vertical-content">
+            <div class="col-lg-6">
+                <div class="mt-3">
+                    <img src="image/Bg_dope.jpg" alt="" class="img-fluid mx-auto d-block">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="cv_edu mt-3">
+                    <div class="cv_edu_box mt-4">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="cv_edu_year font-weight-bold text-white position-relative">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">2010 - 2014</font>
+                                    </font>
+                                </div>
+                                <div class="cb_edu_detail">
+                                    <h4>
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Studied at Cambridge University
+                                            </font>
+                                        </font>
+                                    </h4>
+                                    <p class="cv_desc mb-0">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">It's important to have a good
+                                                customer service, a customer service provider. </font>
+                                            <font style="vertical-align: inherit;">Aenean's good fortune needs pain.
+                                            </font>
+                                        </font>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cv_edu_box mt-4">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="cv_edu_year font-weight-bold text-white position-relative">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">2014 - 2016</font>
+                                    </font>
+                                </div>
+                                <div class="cb_edu_detail">
+                                    <h4>
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Master In Computer Science</font>
+                                        </font>
+                                    </h4>
+                                    <p class="cv_desc mb-0">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">It's important to have a good
+                                                customer service, a customer service provider. </font>
+                                            <font style="vertical-align: inherit;">Aenean's good fortune needs pain.
+                                            </font>
+                                        </font>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3 vertical-content">
+            <div class="col-lg-6">
+                <div class="cv_exp mt-3">
+                    <div class="cv_exp_box mt-4">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="cv_exp_year text-right font-weight-bold text-white position-relative">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">2010 - 2014</font>
+                                    </font>
+                                </div>
+                                <div class="cb_exp_detail">
+                                    <h4>
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">Senior Graphic Designer</font>
+                                        </font>
+                                    </h4>
+                                    <p class="cv_desc mb-0">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">It's important to have a good
+                                                customer service, a customer service provider. </font>
+                                            <font style="vertical-align: inherit;">Aenean's good fortune needs pain.
+                                            </font>
+                                        </font>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="mt-3">
+                    <img src="image/banner4.jpg" alt="" class="img-fluid mx-auto d-block">
+                </div>
+            </div>
+        </div>
     </div>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
 
     <!-- Footer Navbar -->
     <a id="foot"></a>
     <div class="footer text-center container-fluid" style="margin-bottom: 0;">
 
         <br>
-        <p>Bootstrap Portfolio built by Aurelio Hevi Alfons November 2022</p>
+        <p>Bootstrap Portfolio built by Aurelio 2023</p>
     </div>
 
     <!-- Include jQuery and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+
+    <!-- Footer -->
+    <script>
+        window.addEventListener("scroll", function () {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                document.querySelector(".footer").style.display = "block";
+            } else {
+                document.querySelector(".footer").style.display = "none";
+            }
+        });
+    </script>
+
 
 </body>
 
