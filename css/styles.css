@@ -1,0 +1,54 @@
+.bgimage {
+    background-image: url("");
+    background-position: center center;
+    background-size: cover;
+    height: 200px;
+}
+
+header {
+    color: brown;
+}
+
+div {}
+
+.custom-nav {
+    padding: 22px 0px;
+    width: 100%;
+    border-radius: 0px;
+    z-index: 999;
+    margin-bottom: 0px;
+    transition: all 0.5s ease-in-out;
+    background-color: transparent;
+}
+
+.navbar-toggler {
+    font-size: 24px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    color: #ffffff;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+/* Existing CSS for making the text in the navbar white */
+.navbar.navbar-light .navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar-toggler {
+    border: none;
+    /* Removes border */
+    background: transparent !important;
+    /* Makes background transparent */
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
